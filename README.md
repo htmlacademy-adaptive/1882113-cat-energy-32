@@ -2,6 +2,7 @@
 
 * Студент: [Nikolay Elisanov](https://up.htmlacademy.ru/adaptive/32/user/1882113).
 * Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
+* Проект: [CAT-ENERGY](https://homersimpsonj.github.io/1882113-cat-energy-32/).
 
 ---
 
