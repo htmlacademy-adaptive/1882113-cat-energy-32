@@ -51,7 +51,14 @@
         <a class="lead__button-link button-link" href="#">
           Подобрать программу
         </a>
-        <img class="lead__img" src="#" width="280" height="270" alt="Баночка кошачьего питания 500 грамм">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/product/hero-desktop@1x.webp 1x, images/product/hero-desktop@2x.webp 2x" width="552" height="499" type="image/webp">
+          <source media="(min-width: 1440px)" srcset="images/product/hero-desktop@1x.png 1x, images/product/hero-desktop@2x.png 2x" width="552" height="499" type="image/png">
+          <source media="(min-width: 768px)" srcset="images/product/hero-tablet@1x.webp 1x, images/product/hero-tablet@2x.webp 2x" width="709" height="609" type="image/webp">
+          <source media="(min-width: 768px)" srcset="images/product/hero-tablet@1x.png 1x, images/product/hero-tablet@2x.png 2x" width="709" height="609" type="image/png">
+          <source media="(min-width: 320px)" srcset="images/product/hero-mobile@1x.webp 1x, images/product/hero-mobile@2x.webp 2x" width="280" height="270" type="image/webp">
+          <img class="lead__img" src="images/product/hero-mobile@1x.png" srcset="images/product/hero-mobile@2x.png 2x" width="280" height="270" alt="Баночка кошачаго питания 500 грамм">
+        </picture>
       </div>
     </section>
 
