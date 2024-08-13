@@ -1,0 +1,26 @@
+.about-works__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.11;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
+.about-works__list {
+  font-size: 14px;
+  color: $default-lighten-color;
+  line-height: 1.28;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

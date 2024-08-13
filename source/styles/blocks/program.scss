@@ -1,0 +1,40 @@
+.program__catalog {
+  background-color: $light-darken-color;
+}
+
+.program__title {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 1.54;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 36px;
+    line-height: 1;
+  }
+}
+
+.program__description {
+  font-size: 14px;
+  line-height: 1.28;
+  color: $default-lighten-color;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 16px;
+    color: $default-color;
+    line-height: 1.5;
+  }
+}
+
+.program__link {
+  font-family: $secondary-font;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-point) {
+    font-size: 20px;
+  }
+}

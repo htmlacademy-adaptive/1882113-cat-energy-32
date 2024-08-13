@@ -1,0 +1,70 @@
+.example {
+  background-color: $light-darken-color;
+}
+
+.example__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.11;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
+.example__description {
+  font-size: 14px;
+  color: $default-lighten-color;
+  line-height: 1.28;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.example__stats {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.example__term {
+  font-size: 12px;
+  line-height: 1;
+  color: $default-lighten-color;
+  text-transform: lowercase;
+
+  @media (min-width: $tablet-point) {
+    font-size: 14px;
+  }
+}
+
+.example__definition {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-point) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+
+.example__wrapper-row {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 1.42;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 20px;
+    line-height: 1;
+  }
+}

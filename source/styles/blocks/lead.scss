@@ -1,0 +1,32 @@
+.lead {
+  font-family: $secondary-font;
+  background-color: $brand-color;
+  color: $light-color;
+
+  @media (min-width: $tablet-point) {
+    color: $default-color;
+    background-color: $light-color;
+  }
+}
+
+.lead__title {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 60px;
+  }
+}
+
+.lead__slogan {
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 20px;
+  }
+}
