@@ -1,3 +1,17 @@
 .footer {
   background-color: $light-darken-color;
 }
+
+.footer__logo-link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

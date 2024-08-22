@@ -1,11 +1,11 @@
 .catalog__title {
   font-family: $secondary-font;
-  font-size: 36px;
+  font-size: $primary-big;
   line-height: 1;
   font-weight: 400;
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 60px;
+    font-size: $tertiary-middle;
   }
 }

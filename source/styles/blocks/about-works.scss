@@ -1,18 +1,18 @@
 .about-works__title {
   font-family: $secondary-font;
-  font-size: 36px;
+  font-size: $primary-big;
   font-weight: 400;
   line-height: 1.11;
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 60px;
+    font-size: $tertiary-middle;
     line-height: 1;
   }
 }
 
 .about-works__list {
-  font-size: 14px;
+  font-size: $secondary-small;
   color: $default-lighten-color;
   line-height: 1.28;
   list-style-type: none;
@@ -20,7 +20,45 @@
   padding: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 16px;
+    font-size: $tertiary-small;
     line-height: 1.5;
+  }
+}
+
+.about-works__item {
+  &--eco::before {
+    @include before (60px, 60px, url("../../icons/stack.svg#eco"));
+
+    @media (min-width: $tablet-point) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--sort::before {
+    @include before (60px, 60px, url("../../icons/stack.svg#sort"));
+
+    @media (min-width: $tablet-point) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--use::before {
+    @include before (60px, 60px, url("../../icons/stack.svg#use"));
+
+    @media (min-width: $tablet-point) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--time::before {
+    @include before (60px, 60px, url("../../icons/stack.svg#time"));
+
+    @media (min-width: $tablet-point) {
+      width: 80px;
+      height: 80px;
+    }
   }
 }

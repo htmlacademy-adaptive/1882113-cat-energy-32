@@ -1,4 +1,21 @@
 /* здесь используйте глобальные переменные */
+// fonts
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;
+
+// font size
+$primary-small: 12px;
+$secondary-small: 14px;
+$tertiary-small: 16px;
+$quaternary-small: 18px;
+$primary-middle: 20px;
+$secondary-middle: 24px;
+$tertiary-middle: 30px;
+$quaternary-middle: 32px;
+$primary-big: 36px;
+$secondary-big: 40px;
+$tertiary-middle: 60px;
+
 // Color
 $default-color: #000000;
 $default-color-mod: #111111;
@@ -8,6 +25,7 @@ $light-color: #ffffff;
 $light-darken-color: #f2f2f2;
 $light-darken-color-mod: #cdcdcd;
 $brand-color: #68b738;
+$accent-color: #666666;
 
 
 // break-point

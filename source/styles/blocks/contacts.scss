@@ -6,19 +6,19 @@
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 20px;
+    font-size: $primary-middle;
     line-height: 1.3;
   }
 }
 
 .contacts__address {
-  font-size: 14px;
+  font-size: $secondary-small;
   font-style: normal;
   color: $default-lighten-color;
   line-height: 1.42;
 
   @media (min-width: $tablet-point) {
-    font-size: 16px;
+    font-size: $tertiary-small;
     line-height: 1.25;
   }
 }

@@ -1,6 +1,9 @@
 .container {
-  width: 280px;
   margin: 0 auto;
+
+  @media (min-width: $mobile-point) {
+    width: 280px;
+  }
 
   @media (min-width: $tablet-point) {
     width: 708px;

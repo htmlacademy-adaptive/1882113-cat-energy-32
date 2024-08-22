@@ -1,17 +1,17 @@
 .promo__title {
   font-family: $secondary-font;
-  font-size: 24px;
+  font-size: $secondary-middle;
   color: $default-color;
   font-weight: 400;
   line-height: 1;
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 32px;
+    font-size: $quaternary-middle;
   }
 
   @media (min-width: $desktop-point) {
-    font-size: 40px;
+    font-size: $secondary-big;
   }
 }
 
@@ -20,14 +20,14 @@
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 24px;
+    font-size: $secondary-middle;
     line-height: 1.33;
   }
 }
 
 .promo__email {
   font-family: $secondary-font;
-  font-size: 20px;
+  font-size: $primary-middle;
   text-transform: uppercase;
   color: $default-lighten-color;
   border: 1px solid $light-darken-color-mod;
@@ -35,7 +35,7 @@
 
 .promo__button {
   font-family: $secondary-font;
-  font-size: 20px;
+  font-size: $primary-middle;
   color: $light-color;
   text-transform: uppercase;
   line-height: 1.3;

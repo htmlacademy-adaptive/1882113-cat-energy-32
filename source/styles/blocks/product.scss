@@ -6,7 +6,7 @@
 
 .product__title {
   font-family: $secondary-font;
-  font-size: 16px;
+  font-size: $tertiary-small;
   color: $default-color-mod-light;
   font-weight: 400;
   line-height: 1.25;
@@ -14,13 +14,13 @@
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 20px;
+    font-size: $primary-middle;
     line-height: 1.2;
   }
 }
 
 .product__stats {
-  font-size: 12px;
+  font-size: $primary-small;
   color: $default-lighten-color;
   line-height: 1.33;
   list-style-type: none;
@@ -28,22 +28,31 @@
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 16px;
+    font-size: $tertiary-small;
     line-height: 1.25;
   }
 }
 
 .product__card--more {
-  .product__title {
-    color: $default-color-mod;
-  }
-
-  .product__description {
-    color: $default-lighten-color;
-    margin: 0;
+  &::before {
+    @include before (30px, 30px, url("../../icons/stack.svg#plus"));
 
     @media (min-width: $tablet-point) {
-      line-height: 1.12;
+      width: 60px;
+      height: 60px;
     }
+  }
+}
+
+.product__card--more .product__title {
+  color: $default-color-mod;
+}
+
+.product__card--more .product__description {
+  color: $default-lighten-color;
+  margin: 0;
+
+  @media (min-width: $tablet-point) {
+    line-height: 1.12;
   }
 }

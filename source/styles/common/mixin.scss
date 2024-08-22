@@ -7,3 +7,14 @@
     src: $font-src;
   }
 }
+
+@mixin before ($width, $height, $src) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+  background-image: $src;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

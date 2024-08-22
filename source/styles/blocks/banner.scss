@@ -1,5 +1,9 @@
 .banner {
   background-color: $brand-color;
+
+  &::before {
+    @include before (80px, 83px, url("../../icons/stack.svg#gift"));
+  }
 }
 
 .banner__description {

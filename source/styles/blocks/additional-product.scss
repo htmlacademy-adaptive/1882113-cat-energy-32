@@ -6,7 +6,7 @@
 
 .additional-product__title {
   font-family: $secondary-font;
-  font-size: 16px;
+  font-size: $tertiary-small;
   color: $default-color-mod-light;
   font-weight: 400;
   line-height: 1;
@@ -14,18 +14,18 @@
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 20px;
+    font-size: $primary-middle;
   }
 }
 
 .additional-product__term,
 .additional-product__definition {
-  font-size: 14px;
+  font-size: $secondary-small;
   line-height: 1;
   color: $default-lighten-color;
 
   @media (min-width: $tablet-point) {
-    font-size: 16px;
+    font-size: $tertiary-small;
     line-height: 1.25;
   }
 }

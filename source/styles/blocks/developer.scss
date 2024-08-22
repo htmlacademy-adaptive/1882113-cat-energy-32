@@ -1,4 +1,32 @@
 .developer__link {
   color: $default-lighten-color;
   line-height: 1.25;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    mask-image: url("../../icons/stack.svg#developer-logo");
+    background-color: $accent-color;
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  &:hover::before {
+    background-color: $brand-color;
+  }
+
+  &:focus-visible::before {
+    background-color: $brand-color;
+  }
+
+  &:active::before {
+    background-color: $brand-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

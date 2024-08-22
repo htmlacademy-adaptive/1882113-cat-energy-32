@@ -1,7 +1,27 @@
 .lead {
   font-family: $secondary-font;
-  background-color: $brand-color;
+  position: relative;
   color: $light-color;
+  min-height: 480px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-image:
+      linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set(url("../../images/site/background-lead-mobile@1x.webp") type("image/webp") 1x,
+      url("../../images/site/background-lead-mobile@2x.webp") type("image/webp") 2x,
+      url("../../images/site/background-lead-mobile@1x.jpg") type("image/jpg") 1x,
+      url("../../images/site/background-lead-mobile@2x.jpg") type("image/jpg") 2x),
+      linear-gradient(to bottom, rgba(66, 65, 71, 1), rgba(81, 80, 84, 1));
+    background-size: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 178px;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-point) {
     color: $default-color;
@@ -10,23 +30,23 @@
 }
 
 .lead__title {
-  font-size: 36px;
+  font-size: $primary-big;
   line-height: 1;
   font-weight: 400;
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 60px;
+    font-size: $tertiary-middle;
   }
 }
 
 .lead__slogan {
-  font-size: 14px;
+  font-size: $secondary-small;
   line-height: 1;
   text-transform: uppercase;
   margin: 0;
 
   @media (min-width: $tablet-point) {
-    font-size: 20px;
+    font-size: $primary-middle;
   }
 }
