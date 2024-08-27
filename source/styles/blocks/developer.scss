@@ -2,6 +2,12 @@
   color: $default-lighten-color;
   line-height: 1.25;
 
+  @include flex;
+
+  @media (min-width: $tablet-point) {
+    gap: 23px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -12,6 +18,7 @@
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
+    order: 1;
   }
 
   &:hover::before {

@@ -1,4 +1,33 @@
+.header .container {
+  @include flex;
+  padding: 14px 0;
+
+  @media (min-width: $tablet-point) {
+    padding: 25px 0;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-point) {
+    padding: 55px 0;
+    align-self: flex-start;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+}
+
 .header__logo {
+  @include flex;
+  gap: 56px;
+
+  @media (min-width: $tablet-point) {
+    gap: 13px;
+  }
+
+  @media (min-width: $desktop-point) {
+    gap: 14px;
+  }
+
   &:hover {
     opacity: 0.8;
   }

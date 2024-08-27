@@ -1,8 +1,29 @@
 .footer {
   background-color: $light-darken-color;
+  min-width: 280px;
+}
+
+.footer .container {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-point) {
+    padding: 55px 0;
+
+    @include flex;
+  }
 }
 
 .footer__logo-link {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid $accent-color-light;
+
+  @media (min-width: $tablet-point) {
+    border: none;
+    padding: 6px 0;
+    margin-right: auto;
+  }
+
   &:hover {
     opacity: 0.8;
   }
@@ -14,4 +35,8 @@
   &:active {
     opacity: 0.6;
   }
+}
+
+.footer__logo-text {
+  margin: 0 auto;
 }
