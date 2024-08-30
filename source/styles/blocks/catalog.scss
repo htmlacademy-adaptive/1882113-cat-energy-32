@@ -1,11 +1,41 @@
+.catalog {
+  position: relative;
+  min-width: 320px;
+}
+
+.catalog .container {
+  padding: 27px 20px 0;
+
+  @media (max-width: 767px) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: $decoration-color;
+    }
+  }
+
+  @media (min-width: $tablet-point) {
+    padding: 65px 30px 50px;
+  }
+
+  @media (min-width: $desktop-point) {
+    padding: 19px 60px 50px;
+  }
+}
+
 .catalog__title {
   font-family: $secondary-font;
   font-size: $primary-big;
   line-height: 1;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 41px;
 
   @media (min-width: $tablet-point) {
     font-size: $tertiary-big;
+    margin: 0 0 84px;
   }
 }

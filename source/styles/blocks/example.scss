@@ -1,5 +1,5 @@
 .example {
-  min-width: 280px;
+  min-width: 320px;
 
   @media (max-width: 767px) {
     background-color: $light-darken-color-bg;
@@ -24,14 +24,14 @@
 }
 
 .example .container {
-  padding: 25px 0 40px;
+  padding: 25px 20px 40px;
 
   @media (min-width: $tablet-point) {
-    padding: 45px 0 101px;
+    padding: 45px 30px 101px;
   }
 
   @media (min-width: $desktop-point) {
-    padding: 19px 0 75px;
+    padding: 19px 60px 75px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

@@ -1,15 +1,15 @@
 .program .container {
   @include flex (column);
   gap: 20px;
-  padding: 20px 0;
+  padding: 20px;
 
   @media (min-width: $tablet-point) {
-    padding: 0;
+    padding: 0 30px;
     gap: 30px;
   }
 
   @media (min-width: $desktop-point) {
-    padding: 82px 0 50px;
+    padding: 82px 60px 50px;
     flex-direction: row;
     gap: 80px;
   }
@@ -40,7 +40,7 @@
     }
 
     &--pro {
-      padding: 47px 67px 59px 52px;
+      padding: 53px 67px 59px 58px;
     }
   }
 

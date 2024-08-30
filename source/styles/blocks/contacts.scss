@@ -1,5 +1,9 @@
 .contacts {
-  min-width: 280px;
+  min-width: 320px;
+
+  &--darken {
+    background-color: $light-darken-color;
+  }
 
   @media (min-width: $desktop-point) {
     display: grid;
@@ -11,12 +15,13 @@
 .contacts .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 26px 0;
+  padding: 26px 20px;
+
 
   @media (min-width: $tablet-point) {
     grid-template-columns: auto auto;
     gap: 308px;
-    padding: 60px 0;
+    padding: 60px 70px;
   }
 
   @media (min-width: $desktop-point) {
@@ -55,6 +60,7 @@
     font-size: $tertiary-small;
     line-height: 1.25;
     text-align: right;
+    width: 157px;
   }
 
   @media (min-width: $desktop-point) {

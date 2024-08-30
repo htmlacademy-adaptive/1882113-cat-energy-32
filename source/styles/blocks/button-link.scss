@@ -4,6 +4,7 @@
   font-family: $secondary-font;
   text-transform: uppercase;
   text-align: center;
+  display: block;
 
   &:hover {
     background-color: $brand-color-darken;

@@ -1,15 +1,19 @@
 .footer {
   background-color: $light-darken-color;
-  min-width: 280px;
+  min-width: 320px;
 }
 
 .footer .container {
-  padding: 20px 0;
+  padding: 20px;
 
   @media (min-width: $tablet-point) {
-    padding: 55px 0;
+    padding: 55px 30px;
 
     @include flex;
+  }
+
+  @media (min-width: $desktop-point) {
+    padding: 55px 60px;
   }
 }
 
