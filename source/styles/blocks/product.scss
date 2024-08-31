@@ -5,8 +5,8 @@
 
   @media (min-width: $tablet-point) {
     display: grid;
-    align-items: start;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 60px;
   }
 
@@ -51,11 +51,7 @@
   }
 
   @media (min-width: $tablet-point) {
-    grid-template-columns: 1fr;
-
-    grid-template-rows: auto auto auto 1fr auto;
-
-    justify-items: center;
+    @include flex(column);
     padding: 10px 37px 40px;
     position: relative;
 
@@ -135,12 +131,11 @@
   grid-column: 2/3;
 
   @media (min-width: $tablet-point) {
-    display: grid;
+    @include flex(column, space-between, normal);
     row-gap: 10px;
     align-self: flex-start;
     font-size: $tertiary-small;
     line-height: 1.25;
-    grid-column: 1/2;
     width: 100%;
     margin: 0 0 35px;
   }

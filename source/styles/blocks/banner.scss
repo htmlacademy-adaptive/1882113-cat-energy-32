@@ -1,3 +1,4 @@
+/* stylelint-disable value-no-vendor-prefix */
 .banner {
   @include flex (column, center, center);
   padding: 58px 58px 43px;
@@ -5,12 +6,18 @@
   background-color: $brand-color;
   background-image:
     linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    image-set(
-      url("../../images/site/baner-image@1x.webp") type("image/webp") 1x,
-      url("../../images/site/baner-image@2x.webp") type("image/webp") 2x,
-      url("../../images/site/baner-image@1x.jpg") type("image/jpg") 1x,
-      url("../../images/site/baner-image@2x.jpg") type("image/jpg") 1x
+    -webkit-image-set(
+      url("../../images/site/baner-image@1x.webp") 1x,
+      url("../../images/site/baner-image@2x.webp") 2x,
+      url("../../images/site/baner-image@1x.jpg") 1x,
+      url("../../images/site/baner-image@2x.jpg") 2x
     );
+  // image-set(
+  //   url("../../images/site/baner-image@1x.webp") type("image/webp") 1x,
+  //   url("../../images/site/baner-image@2x.webp") type("image/webp") 2x,
+  //   url("../../images/site/baner-image@1x.jpg") type("image/jpg") 1x,
+  //   url("../../images/site/baner-image@2x.jpg") type("image/jpg") 1x
+  // );
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -22,12 +29,18 @@
     padding: 57px 125px 60px 77px;
     background-image:
       linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      image-set(
-        url("../../images/site/baner-image-tablet@1x.webp") type("image/webp") 1x,
-        url("../../images/site/baner-image-tablet@2x.webp") type("image/webp") 2x,
-        url("../../images/site/baner-image-tablet@1x.jpg") type("image/jpg") 1x,
-        url("../../images/site/baner-image-tablet@2x.jpg") type("image/jpg") 1x
+      -webkit-image-set(
+        url("../../images/site/baner-image-tablet@1x.webp") 1x,
+        url("../../images/site/baner-image-tablet@2x.webp") 2x,
+        url("../../images/site/baner-image-tablet@1x.jpg") 1x,
+        url("../../images/site/baner-image-tablet@2x.jpg") 2x
       );
+    // image-set(
+    //   url("../../images/site/baner-image-tablet@1x.webp") type("image/webp") 1x,
+    //   url("../../images/site/baner-image-tablet@2x.webp") type("image/webp") 2x,
+    //   url("../../images/site/baner-image-tablet@1x.jpg") type("image/jpg") 1x,
+    //   url("../../images/site/baner-image-tablet@2x.jpg") type("image/jpg") 1x
+    // );
     background-size: 708px 199px;
   }
 
@@ -38,12 +51,18 @@
 
     background-image:
       linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      image-set(
-        url("../../images/site/baner-image-desktop@1x.webp") type("image/webp") 1x,
-        url("../../images/site/baner-image-desktop@2x.webp") type("image/webp") 2x,
-        url("../../images/site/baner-image-desktop@1x.jpg") type("image/jpg") 1x,
-        url("../../images/site/baner-image-desktop@2x.jpg") type("image/jpg") 1x
+      -webkit-image-set(
+        url("../../images/site/baner-image-desktop@1x.webp") 1x,
+        url("../../images/site/baner-image-desktop@2x.webp") 2x,
+        url("../../images/site/baner-image-desktop@1x.jpg") 1x,
+        url("../../images/site/baner-image-desktop@2x.jpg") 2x
       );
+    // image-set(
+    //   url("../../images/site/baner-image-desktop@1x.webp") type("image/webp") 1x,
+    //   url("../../images/site/baner-image-desktop@2x.webp") type("image/webp") 2x,
+    //   url("../../images/site/baner-image-desktop@1x.jpg") type("image/jpg") 1x,
+    //   url("../../images/site/baner-image-desktop@2x.jpg") type("image/jpg") 1x
+    // );
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
