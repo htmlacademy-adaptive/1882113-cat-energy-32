@@ -1,3 +1,4 @@
+/* stylelint-disable value-no-vendor-prefix */
 .lead {
   font-family: $secondary-font;
   position: relative;
@@ -26,11 +27,18 @@
     width: 100%;
     background-image:
       linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      image-set(url("../../images/site/background-lead-mobile@1x.webp") type("image/webp") 1x,
-      url("../../images/site/background-lead-mobile@2x.webp") type("image/webp") 2x,
-      url("../../images/site/background-lead-mobile@1x.jpg") type("image/jpg") 1x,
-      url("../../images/site/background-lead-mobile@2x.jpg") type("image/jpg") 2x),
+      -webkit-image-set(
+        url("../../images/site/background-lead-mobile@1x.webp") 1x,
+        url("../../images/site/background-lead-mobile@2x.webp") 2x,
+        url("../../images/site/background-lead-mobile@1x.jpg") 1x,
+        url("../../images/site/background-lead-mobile@2x.jpg") 2x),
       linear-gradient(to right, rgba(82, 81, 86, 1), rgba(64, 63, 69, 1));
+    // linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    // image-set(url("../../images/site/background-lead-mobile@1x.webp") type("image/webp") 1x,
+    // url("../../images/site/background-lead-mobile@2x.webp") type("image/webp") 2x,
+    // url("../../images/site/background-lead-mobile@1x.jpg") type("image/jpg") 1x,
+    // url("../../images/site/background-lead-mobile@2x.jpg") type("image/jpg") 2x),
+    // linear-gradient(to right, rgba(82, 81, 86, 1), rgba(64, 63, 69, 1));
     background-size: auto;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -49,10 +57,10 @@
       width: 100%;
       background-image:
         linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        image-set(url("../../images/site/background-lead-desktop@1x.webp") type("image/webp") 1x,
-        url("../../images/site/background-lead-desktop@2x.webp") type("image/webp") 2x,
-        url("../../images/site/background-lead-desktop@1x.jpg") type("image/jpg") 1x,
-        url("../../images/site/background-lead-desktop@2x.jpg") type("image/jpg") 2x),
+        -webkit-image-set(url("../../images/site/background-lead-desktop@1x.webp") 1x,
+        url("../../images/site/background-lead-desktop@2x.webp") 2x,
+        url("../../images/site/background-lead-desktop@1x.jpg") 1x,
+        url("../../images/site/background-lead-desktop@2x.jpg") 2x),
         linear-gradient(to right, rgba(66, 65, 71, 1), rgba(62, 62, 64, 1));
       background-size: auto 694px;
       background-position: top left;

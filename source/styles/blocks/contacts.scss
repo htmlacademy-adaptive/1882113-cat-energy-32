@@ -14,9 +14,10 @@
 
 .contacts .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 26px 20px;
 
+  grid-template-columns: 140px 140px;
+  justify-content: center;
+  padding: 26px 20px;
 
   @media (min-width: $tablet-point) {
     grid-template-columns: auto auto;

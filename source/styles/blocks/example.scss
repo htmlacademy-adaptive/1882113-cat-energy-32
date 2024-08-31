@@ -1,12 +1,12 @@
 .example {
   min-width: 320px;
 
-  @media (max-width: 767px) {
-    background-color: $light-darken-color-bg;
-  }
+  background-color: $light-darken-color-bg;
+
 
   @media (min-width: $tablet-point) {
     position: relative;
+    background-color: transparent;
 
     &::before {
       content: "";
@@ -114,9 +114,6 @@
 
 .example__stats-wrapper {
   @include flex (column, flex-start);
-  // // border: 1px solid $accent-color-light;
-  // // width: 124px;
-  // // height: 56px;
 }
 
 .example__term {
@@ -201,6 +198,7 @@
   width: 280px;
   height: 256px;
   overflow: hidden;
+  margin: 0 auto;
 
   @media (min-width: $tablet-point) {
     width: 560px;
