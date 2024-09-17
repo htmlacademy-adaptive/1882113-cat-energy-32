@@ -14,11 +14,12 @@
       inset: 0;
       background-image: linear-gradient(to top, rgba(242, 242, 242, 1) 462px, transparent 462px);
       z-index: -1;
+    }
+  }
 
-      /* stylelint-disable-next-line max-nesting-depth */
-      @media (min-width: $desktop-point) {
-        background-image: linear-gradient(to bottom, transparent 155px, rgba(242, 242, 242, 1) 155px);
-      }
+  @media (min-width: $desktop-point) {
+    &::before {
+      background-image: linear-gradient(to bottom, transparent 212px, rgba(242, 242, 242, 1) 212px);
     }
   }
 }
@@ -31,7 +32,7 @@
   }
 
   @media (min-width: $desktop-point) {
-    padding: 19px 60px 75px;
+    padding: 77px 60px 75px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -52,7 +53,7 @@
   }
 
   @media (min-width: $desktop-point) {
-    margin-bottom: 142px;
+    margin-bottom: 145px;
   }
 }
 
@@ -70,7 +71,7 @@
   }
 
   @media (min-width: $desktop-point) {
-    width: 436px;
+    width: 433px;
     grid-column: 1/2;
     margin-bottom: 69px;
   }
@@ -79,7 +80,7 @@
 .example__wrapper {
   @media (min-width: $tablet-point) {
     @include flex;
-    margin-bottom: 99px;
+    margin-bottom: 90px;
     align-items: flex-start;
   }
 
@@ -91,7 +92,6 @@
 }
 
 .example__stats {
-  // @include flex;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
@@ -108,7 +108,7 @@
 
   @media (min-width: $desktop-point) {
     gap: 42px;
-    margin-bottom: 55px;
+    margin-bottom: 46px;
   }
 }
 
@@ -158,7 +158,11 @@
     font-size: $tertiary-middle;
     line-height: 1.23;
     width: 162px;
-    padding: 15px;
+    padding: 15px 15px 18px;
+  }
+
+  @media (min-width: $desktop-point) {
+    padding: 15px 15px 18px;
   }
 }
 
@@ -185,12 +189,17 @@
     width: auto;
 
     @include flex;
-    column-gap: 63px;
+    column-gap: 67px;
     flex-wrap: wrap;
   }
 }
 
-// Слайдер
+.example__term-row {
+  @media (min-width: $tablet-point) and (max-width: 1339px) {
+    display: inline-block;
+    margin: 0 0 9px;
+  }
+}
 
 .example__slider {
   display: grid;
@@ -209,6 +218,8 @@
   @media (min-width: $desktop-point) {
     grid-column: 2/3;
     grid-row: 1/4;
+    margin: 0;
+    justify-self: end;
   }
 }
 
@@ -283,5 +294,15 @@
   &:active,
   &:active::after {
     background-color: rgba(94, 170, 47, 0.6);
+  }
+
+  &:focus-visible,
+  &:focus-visible::after {
+    outline: none;
+    background-color: rgb(94, 170, 47);
+  }
+
+  &:focus-visible::before {
+    border-color: rgb(94, 170, 47);
   }
 }

@@ -6,7 +6,9 @@
 
   @media (min-width: $tablet-point) {
     font-size: $quaternary-small;
+    align-self: flex-end;
     line-height: 1.33;
+    padding: 0 4px 0 0;
     max-width: 450px;
   }
 
@@ -14,6 +16,14 @@
     font-size: $primary-middle;
     line-height: 1;
     max-width: 610px;
+    padding: 0;
+    align-self: auto;
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .main-nav.main-nav--nojs {
+    margin: 0 auto;
   }
 }
 
@@ -25,6 +35,7 @@
   position: relative;
   cursor: pointer;
   background-color: $light-color;
+  margin: 0 1px 0 0;
 
   &::before,
   &::after {
@@ -37,7 +48,7 @@
   }
 
   &::before {
-    top: 4px;
+    top: 2px;
     right: 0;
   }
 
@@ -51,9 +62,15 @@
   }
 }
 
+@media (max-width: $mobile-only) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
 .main-nav__toggle-wrapper {
   position: absolute;
-  top: calc(50% - 1px);
+  top: calc(50% - 2px);
   left: 0;
   width: 100%;
   height: 2px;
@@ -62,7 +79,7 @@
 
 .main-nav__list {
   position: absolute;
-  top: 66px;
+  top: 65px;
   left: 0;
   right: 0;
   background-color: $light-color;
@@ -76,8 +93,8 @@
     display: block;
     position: static;
 
-    @include flex;
-    gap: 10px 33px;
+    @include flex($justify: flex-start);
+    gap: 10px 34px;
     flex-wrap: wrap;
   }
 
@@ -85,17 +102,52 @@
     &--index {
       color: $light-color;
     }
-    column-gap: 33px;
+    column-gap: 34px;
     background-color: transparent;
   }
 }
 
+@media (max-width: $mobile-only) {
+  .main-nav--nojs .main-nav__list {
+    display: block;
+    position: static;
+  }
+}
+
 .main-nav__item {
-  border-top: 1px solid $accent-color-light;
+  position: relative;
   text-align: center;
 
-  @media (min-width: $tablet-point) {
-    border: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    min-width: 320px;
+    background-color: $border-color-link;
+    box-shadow: 100vw 0 0 0 $border-color-link;
+
+    @media (min-width: $tablet-point) {
+      display: none;
+    }
+  }
+
+  &:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    min-width: 320px;
+    background-color: $border-color-link;
+    box-shadow: 100vw 0 0 0 $border-color-link;
+
+    @media (min-width: $tablet-point) {
+      display: none;
+    }
   }
 }
 
@@ -106,8 +158,7 @@
 
   @media (min-width: $tablet-point) {
     padding: 0;
-    padding-bottom: 9px;
-    // анимация подчеркивания ссылок
+    padding-bottom: 11px;
   }
 
   @media (min-width: $tablet-point) {
@@ -115,7 +166,7 @@
       text-decoration: underline;
       text-decoration-color: $brand-color;
       text-decoration-thickness: 2px;
-      text-underline-offset: 10px;
+      text-underline-offset: 12px;
     }
 
     &::before {
@@ -128,7 +179,7 @@
       background-color: $brand-color;
       transform: scaleX(0);
       transform-origin: right;
-      transition: transform 0.3s;
+      transition: transform 0.5s ease;
 
       @media (min-width: $desktop-point) {
         bottom: 2px;
@@ -139,7 +190,6 @@
       transform: scaleX(1);
       transform-origin: left;
     }
-    // подчеркивание сылок ховер
   }
 
 
@@ -161,27 +211,32 @@
     background-color: $light-color;
   }
 }
-// подчеркивание сыылок анимация
+
 .main-nav__list--index .main-nav__link--current {
   @media (min-width: $desktop-point) {
     text-decoration-color: $light-color;
   }
 }
 
-.main-nav.active .main-nav__toggle-wrapper {
-  transform: scale(0);
-}
 
-.main-nav.active .main-nav__toggle::before {
-  top: calc(50% - 1px);
-  transform: rotate(45deg);
-}
+@media (max-width: $mobile-only) {
+  .main-nav.active .main-nav__toggle-wrapper {
+    transform: scale(0);
+  }
 
-.main-nav.active .main-nav__toggle::after {
-  top: calc(50% - 1px);
-  transform: rotate(-45deg);
-}
+  .main-nav.active .main-nav__toggle::before {
+    top: calc(50% - 1px);
+    left: 10%;
+    transform: rotate(45deg);
+  }
 
-.main-nav.active .main-nav__list {
-  display: block;
+  .main-nav.active .main-nav__toggle::after {
+    top: calc(50% - 1px);
+    left: 10%;
+    transform: rotate(-45deg);
+  }
+
+  .main-nav.active .main-nav__list {
+    display: block;
+  }
 }

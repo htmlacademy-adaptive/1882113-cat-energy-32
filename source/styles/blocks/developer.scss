@@ -4,6 +4,11 @@
 
   @include flex;
 
+  @media (max-width: $mobile-only) {
+    width: 280px;
+    margin: 0 auto;
+  }
+
   @media (min-width: $tablet-point) {
     gap: 23px;
   }
@@ -23,6 +28,10 @@
 
   &:hover::before {
     background-color: $brand-color;
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 
   &:focus-visible::before {

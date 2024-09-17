@@ -1,12 +1,12 @@
 .promo .container {
-  padding: 40px 20px;
+  padding: 40px 20px 41px;
 
   @media (min-width: $tablet-point) {
-    padding: 40px 30px 80px;
+    padding: 40px 30px 82px;
   }
 
-  @media (min-width: $tablet-point) {
-    padding: 76px 60px 96px;
+  @media (min-width: $desktop-point) {
+    padding: 76px 60px 104px;
   }
 }
 
@@ -25,7 +25,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 12px;
+    top: 10px;
     right: 0;
     width: 100vw;
     height: 2px;
@@ -34,11 +34,11 @@
     z-index: -1;
 
     @media (min-width: $tablet-point) {
-      top: 16px;
+      top: 14px;
     }
 
     @media (min-width: $desktop-point) {
-      top: 20px;
+      top: 18px;
     }
   }
 
@@ -49,7 +49,7 @@
 
   @media (min-width: $desktop-point) {
     font-size: $secondary-big;
-    margin: 0 0 72px -40px;
+    margin: 0 0 73px -40px;
   }
 }
 
@@ -62,6 +62,11 @@
     font-size: $secondary-middle;
     line-height: 1.33;
     padding: 0 38px;
+    margin: 0 0 23px;
+  }
+
+  @media (min-width: $desktop-point) {
+    margin: 0 0 22px;
   }
 }
 
@@ -84,8 +89,8 @@
   color: $default-lighten-color;
   border: 1px solid $border-color;
   width: 100%;
-  padding: 13px;
-  margin: 0 0 16px;
+  padding: 12px;
+  margin: 0 0 17px;
 
   @media (min-width: $tablet-point) {
     margin: 0;
@@ -94,10 +99,10 @@
   &:hover {
     border-color: $light-darken-color-mod;
   }
+}
 
-  &:user-invalid {
-    outline: 2px solid $error;
-  }
+.promo__email.error {
+  border-color: $error;
 }
 
 .promo__button {

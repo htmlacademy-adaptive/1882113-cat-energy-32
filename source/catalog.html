@@ -5,10 +5,13 @@
   <meta charset="UTF-8">
   <title>CAT ENERGY | Каталог</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Функциональное питание для котов, наши товары">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -28,7 +31,7 @@
           <img class="header__logo-text" src="images/site/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat energy">
         </picture>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <span class="main-nav__toggle-wrapper"></span>
@@ -468,7 +471,7 @@
         </ul>
         <div class="banner">
           <p class="banner__description">
-            Закажите все и получите чехол для кота в подарок!
+            Закажите все <br>и получите чехол для кота в подарок!
           </p>
         </div>
       </div>
@@ -498,7 +501,7 @@
       <div class="container">
         <h2 class="visually-hidden">Адрес</h2>
         <p class="contacts__slogan">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем <br>к сотрудничеству дилеров!
         </p>
         <address class="contacts__address">
           <p class="contacts__street">
@@ -509,16 +512,9 @@
           </p>
         </address>
       </div>
-      <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad93451f90dfaccffbdd1e84139b594c5369af35f954f54a7e835a7216aa26938&amp;source=constructor" height="400"></iframe>
-      <!-- <picture>
-        <source media="(min-width: 1340px)" srcset="images/site/map-desktop@1x.webp 1x, images/site/map-desktop@2x.webp 2x" type="image/webp" width="1440" height="400">
-        <source media="(min-width: 768px)" srcset="images/site/map-tablet@1x.webp 1x, images/site/map-tablet@2x.webp 2x" type="image/webp" width="768" height="400">
-        <source media="(min-width: 320px)" srcset="images/site/map-mobile@1x.webp 1x, images/site/map-mobile@2x.webp 2x" type="image/webp" width="320" height="362">
-
-        <source media="(min-width: 1340px)" srcset="images/site/map-desktop@1x.png 1x, images/site/map-desktop@2x.png 2x" type="image/png" width="1440" height="400">
-        <source media="(min-width: 768px)" srcset="images/site/map-tablet@1x.png 1x, images/site/map-tablet@2x.png 2x" type="image/png" width="768" height="400">
-        <img class="contacts__map" src="images/site/map-mobile@1x.png" srcset="images/site/map-mobile@2x.png 2x" width="320" height="362" alt="Карта проезда к нам">
-      </picture> -->
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad93451f90dfaccffbdd1e84139b594c5369af35f954f54a7e835a7216aa26938&amp;source=constructor" height="400"></iframe>
+      <noscript class="contacts__no-js">
+      </noscript>
     </section>
   </main>
 

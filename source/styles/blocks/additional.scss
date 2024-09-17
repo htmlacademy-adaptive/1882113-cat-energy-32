@@ -21,13 +21,13 @@
   position: relative;
   background-color: $light-color;
   padding: 0 40px;
-  margin: 0 0 36px -40px;
+  margin: 0 0 35px -40px;
   width: fit-content;
 
   &::before {
     content: "";
     position: absolute;
-    top: 12px;
+    top: 10px;
     right: 0;
     width: 100vw;
     box-shadow: 100vw 0 0 0 $brand-color;
@@ -36,11 +36,11 @@
     z-index: -1;
 
     @media (min-width: $tablet-point) {
-      top: 16px;
+      top: 13px;
     }
 
     @media (min-width: $desktop-point) {
-      top: 20px;
+      top: 18px;
     }
   }
 

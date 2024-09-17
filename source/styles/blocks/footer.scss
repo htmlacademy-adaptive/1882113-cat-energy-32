@@ -6,6 +6,10 @@
 .footer .container {
   padding: 20px;
 
+  @media (max-width: $mobile-only) {
+    width: auto;
+  }
+
   @media (min-width: $tablet-point) {
     padding: 55px 30px;
 
@@ -13,7 +17,7 @@
   }
 
   @media (min-width: $desktop-point) {
-    padding: 55px 60px;
+    padding: 66px 60px 65px;
   }
 }
 
@@ -21,6 +25,7 @@
   display: block;
   padding: 20px 0;
   border-bottom: 1px solid $accent-color-light;
+  position: relative;
 
   @media (min-width: $tablet-point) {
     border: none;
@@ -33,6 +38,7 @@
   }
 
   &:focus-visible {
+    outline: none;
     opacity: 0.8;
   }
 

@@ -4,22 +4,24 @@
 }
 
 .catalog .container {
-  padding: 27px 20px 0;
+  padding: 28px 20px 0;
 
-  @media (max-width: 767px) {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background-color: $decoration-color;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $decoration-color;
+
+    @media (min-width: $tablet-point) {
+      display: none;
     }
   }
 
   @media (min-width: $tablet-point) {
-    padding: 65px 30px 50px;
+    padding: 41px 30px 50px;
   }
 
   @media (min-width: $desktop-point) {
@@ -36,6 +38,6 @@
 
   @media (min-width: $tablet-point) {
     font-size: $tertiary-big;
-    margin: 0 0 84px;
+    margin: 0 0 83px;
   }
 }

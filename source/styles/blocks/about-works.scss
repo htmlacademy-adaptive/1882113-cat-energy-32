@@ -56,9 +56,9 @@
     font-size: $tertiary-small;
     line-height: 1.5;
     padding: 0;
-    padding-right: 79px;
+    padding-right: 80px;
     display: grid;
-    grid-template-columns: 230px 245px;
+    grid-template-columns: 230px 244px;
     align-items: flex-start;
     gap: 37px 100px;
 
@@ -66,9 +66,10 @@
   }
 
   @media (min-width: $desktop-point) {
-    @include flex;
+    @include flex (row, flex-start, stretch);
     padding: 0;
-    gap: 77px;
+    gap: 80px;
+    flex-wrap: wrap;
   }
 }
 
@@ -93,13 +94,25 @@
       line-height: 1;
       font-weight: 400;
       font-family: $secondary-font;
-      justify-self: end;
+      left: 115px;
       z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-point) {
+    padding: 0;
+    flex-basis: 245px;
+    align-items: start;
+
+    &::after {
+      top: -40px;
     }
   }
 
   &--eco::before {
     @include before (60px, 60px, url("../../icons/stack.svg#eco"));
+    background-color: $brand-color;
+    background-size: 30px 32px;
 
     @media (min-width: $tablet-point) {
       width: 80px;
@@ -109,6 +122,8 @@
 
   &--sort::before {
     @include before (60px, 60px, url("../../icons/stack.svg#sort"));
+    background-color: $brand-color;
+    background-size: 30px 32px;
 
     @media (min-width: $tablet-point) {
       width: 80px;
@@ -118,6 +133,8 @@
 
   &--use::before {
     @include before (60px, 60px, url("../../icons/stack.svg#use"));
+    background-color: $brand-color;
+    background-size: 30px 32px;
 
     @media (min-width: $tablet-point) {
       width: 80px;
@@ -127,6 +144,8 @@
 
   &--time::before {
     @include before (60px, 60px, url("../../icons/stack.svg#time"));
+    background-color: $brand-color;
+    background-size: 30px 32px;
 
     @media (min-width: $tablet-point) {
       width: 80px;
@@ -136,5 +155,8 @@
 }
 
 .about-works__desc {
+  @media (min-width: $desktop-point) {
+    max-width: 244px;
+  }
   margin: 0;
 }
