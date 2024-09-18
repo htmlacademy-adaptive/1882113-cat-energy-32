@@ -1,1 +1,41 @@
-/* здесь используйте глобальные переменные */
+// fonts
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;
+
+// font size
+$primary-small: 12px;
+$secondary-small: 14px;
+$tertiary-small: 16px;
+$quaternary-small: 18px;
+$primary-middle: 20px;
+$secondary-middle: 24px;
+$tertiary-middle: 30px;
+$quaternary-middle: 32px;
+$primary-big: 36px;
+$secondary-big: 40px;
+$tertiary-big: 60px;
+
+// Color
+$default-color: #000000;
+$default-color-mod: #111111;
+$default-color-mod-light: #222222;
+$default-lighten-color: #444444;
+$light-color: #ffffff;
+$light-darken-color: #f2f2f2;
+$light-darken-color-bg: #eaeaea;
+$light-darken-color-mod: #cdcdcd;
+$brand-color: #68b738;
+$brand-color-darken: #5eaa2f;
+$accent-color: #666666;
+$accent-color-light: #d9d9d9;
+$decoration-color: #ebebeb;
+$border-color: #e7e7e7;
+$border-color-link: #e6e6e6;
+$error: #ff8282;
+
+
+// break-point
+$mobile-point: 320px;
+$mobile-only: 767px;
+$tablet-point: 768px;
+$desktop-point: 1340px;

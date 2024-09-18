@@ -1,0 +1,21 @@
+.button-link {
+  color: $light-color;
+  background-color: $brand-color;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+
+  &:hover {
+    background-color: $brand-color-darken;
+  }
+
+  &:focus-visible {
+    background-color: $brand-color-darken;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $brand-color-darken;
+  }
+}

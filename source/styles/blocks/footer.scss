@@ -1,0 +1,52 @@
+.footer {
+  background-color: $light-darken-color;
+  min-width: 320px;
+}
+
+.footer .container {
+  padding: 20px;
+
+  @media (max-width: $mobile-only) {
+    width: auto;
+  }
+
+  @media (min-width: $tablet-point) {
+    padding: 55px 30px;
+
+    @include flex;
+  }
+
+  @media (min-width: $desktop-point) {
+    padding: 66px 60px 65px;
+  }
+}
+
+.footer__logo-link {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid $accent-color-light;
+  position: relative;
+
+  @media (min-width: $tablet-point) {
+    border: none;
+    padding: 6px 0;
+    margin-right: auto;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__logo-text {
+  margin: 0 auto;
+}

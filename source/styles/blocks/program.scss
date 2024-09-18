@@ -1,0 +1,207 @@
+.program .container {
+  @include flex (column);
+  gap: 20px;
+  padding: 20px;
+
+  @media (min-width: $tablet-point) {
+    padding: 0 30px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-point) {
+    padding: 82px 60px 50px;
+    flex-flow: row wrap;
+    align-items: normal;
+    gap: 80px;
+  }
+}
+
+.program__catalog {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  padding: 20px 20px 18px;
+  align-items: center;
+  column-gap: 20px;
+  background-color: $light-darken-color;
+
+  &--pro {
+    padding: 24px 20px 18px;
+  }
+
+  @media (min-width: $tablet-point) {
+    grid-template-columns: 1fr 200px;
+    column-gap: 53px;
+    padding: 77px 63px 59px 52px;
+    align-items: start;
+  }
+
+  @media (min-width: $desktop-point) {
+    grid-template-columns: auto 1fr;
+    align-content: space-between;
+    align-items: flex-end;
+    column-gap: 62px;
+
+    &--slim {
+      padding: 41px 61px 55px 52px;
+    }
+
+    &--pro {
+      padding: 47px 67px 55px 52px;
+      column-gap: 48px;
+    }
+  }
+
+  &--slim::before {
+    @include before (50px, 53px, url("../../icons/stack.svg#cat"));
+    grid-column: 1/2;
+
+    @media (min-width: $tablet-point) {
+      width: 200px;
+      height: 211px;
+      grid-column: 2/3;
+      grid-row: 1/4;
+      justify-self: center;
+    }
+
+    @media (min-width: $desktop-point) {
+      width: 100px;
+      height: 106px;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-bottom: 39px;
+    }
+  }
+
+  &--pro::before {
+    @include before (67px, 50px, url("../../icons/stack.svg#cat-walk"));
+    position: relative;
+    left: -8px;
+
+    @media (min-width: $tablet-point) {
+      width: 268px;
+      height: 200px;
+      grid-column: 2/3;
+      grid-row: 1/4;
+      left: -34px;
+      top: 18px;
+    }
+
+    @media (min-width: $desktop-point) {
+      width: 134px;
+      top: 0;
+      height: 100px;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      left: -19px;
+      margin-right: -19px;
+      margin-bottom: 39px;
+    }
+  }
+}
+
+.program__catalog--slim .program__description {
+  @media (min-width: $desktop-point) {
+    width: 457px;
+  }
+}
+
+.program__catalog--pro .program__description {
+  @media (min-width: $desktop-point) {
+    width: 451px;
+  }
+}
+
+.program__title {
+  font-family: $secondary-font;
+  font-size: $secondary-middle;
+  line-height: 1.54;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  grid-column: 2/4;
+
+  @media (min-width: $tablet-point) {
+    font-size: $primary-big;
+    line-height: 1;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-point) {
+    grid-column: 2/3;
+    margin-bottom: 73px;
+  }
+}
+
+.program__description {
+  font-size: $secondary-small;
+  line-height: 1.28;
+  color: $default-lighten-color;
+  padding: 22px 0 23px;
+  margin: 0 0 15px;
+  grid-column: 1/4;
+  border-bottom: 1px solid $accent-color-light;
+
+  @media (min-width: $tablet-point) {
+    font-size: $tertiary-small;
+    color: $default-color;
+    line-height: 1.5;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    margin-bottom: 52px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-point) {
+    grid-column: 1/3;
+    width: 457px;
+    margin-bottom: 23px;
+  }
+}
+
+.program__link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: $secondary-font;
+  line-height: 1;
+  text-transform: uppercase;
+  grid-column: 1/4;
+  padding: 4px 0;
+
+  @media (min-width: $tablet-point) {
+    font-size: 20px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 4px 0;
+    gap: 25px;
+  }
+
+  @media (min-width: $desktop-point) {
+    grid-column: 1/3;
+    padding: 9px 0;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 10px;
+    background-image: url("../../icons/stack.svg#arrow");
+    background-position: -3px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-position 0.4s;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-position: right;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

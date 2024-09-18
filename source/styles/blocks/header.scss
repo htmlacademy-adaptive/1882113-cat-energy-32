@@ -1,5 +1,51 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+.header .container {
+  @include flex;
+  padding: 0 20px;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-point) {
+    padding: 25px 30px;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-point) {
+    padding: 55px 60px;
+  }
+}
+
+.header--main .container {
+  @media (min-width: $desktop-point) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.header__logo {
+  @include flex;
+  gap: 56px;
+  padding: 13px 0 14px;
+
+  @media (min-width: $tablet-point) {
+    gap: 13px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-point) {
+    gap: 14px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

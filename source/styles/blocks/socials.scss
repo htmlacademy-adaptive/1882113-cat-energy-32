@@ -1,0 +1,79 @@
+.socials {
+  list-style-type: none;
+  margin: 0;
+
+  @include flex (row, center);
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  border-bottom: 1px solid $accent-color-light;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-point) {
+    width: 132px;
+    border: none;
+    padding: 8px 0 7px;
+    margin: 0 123px 0 0;
+  }
+
+  @media (min-width: $desktop-point) {
+    border: none;
+    padding: 8px 0 7px;
+    margin: 0 380px 0 0;
+  }
+}
+
+.socials__link {
+  &--vk::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: $accent-color;
+    mask-image: url("../../icons/stack.svg#vkontakte");
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  &--yout::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: $accent-color;
+    mask-image: url("../../icons/stack.svg#youtube");
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  &--tg::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: $accent-color;
+    mask-image: url("../../icons/stack.svg#telegram");
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  &:hover::before {
+    background-color: $brand-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::before {
+    background-color: $brand-color;
+  }
+
+  &:active::before {
+    background-color: $brand-color;
+    opacity: 0.3;
+  }
+}
