@@ -24,7 +24,7 @@
   }
 }
 
-.example .container {
+.example__container {
   padding: 25px 20px 40px;
 
   @media (min-width: $tablet-point) {
@@ -221,6 +221,11 @@
     margin: 0;
     justify-self: end;
   }
+}
+
+.example__slider picture,
+.example__slider source {
+  display: contents;
 }
 
 .example__slider-before {

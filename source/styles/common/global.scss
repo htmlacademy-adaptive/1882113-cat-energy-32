@@ -20,15 +20,6 @@ body {
   line-height: 1.5;
 }
 
-main {
-  flex-grow: 1;
-}
-
-picture,
-source {
-  display: contents;
-}
-
 img {
   display: block;
   object-fit: contain;

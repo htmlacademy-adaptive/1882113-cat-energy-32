@@ -104,6 +104,14 @@
     }
     column-gap: 34px;
     background-color: transparent;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .main-nav--nojs .main-nav__list {
+    display: block;
+    position: static;
   }
 }
 

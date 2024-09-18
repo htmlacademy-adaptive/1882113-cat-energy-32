@@ -14,7 +14,7 @@
   }
 }
 
-.about-works .container {
+.about-works__container {
   @media (min-width: $tablet-point) {
     padding: 45px 30px 47px;
   }
@@ -95,6 +95,7 @@
       font-weight: 400;
       font-family: $secondary-font;
       left: 115px;
+      top: 0;
       z-index: -1;
     }
   }
@@ -103,6 +104,7 @@
     padding: 0;
     flex-basis: 245px;
     align-items: start;
+    grid-template-rows: 80px 1fr;
 
     &::after {
       top: -40px;

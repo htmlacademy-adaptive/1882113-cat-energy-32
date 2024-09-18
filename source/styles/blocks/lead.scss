@@ -79,7 +79,7 @@
   }
 }
 
-.lead .container {
+.lead__container {
   @include flex (column);
 
   @media (min-width: $tablet-point) {
@@ -160,6 +160,11 @@
     grid-column: 1/2;
     margin: 0 0 184px 80px;
   }
+}
+
+.lead picture,
+.lead source {
+  display: contents;
 }
 
 .lead__img {

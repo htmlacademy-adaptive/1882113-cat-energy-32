@@ -1,4 +1,4 @@
-.header .container {
+.header__container {
   @include flex;
   padding: 0 20px;
   flex-wrap: wrap;
@@ -13,7 +13,7 @@
   }
 }
 
-.header--main .container {
+.header--main .header__container {
   @media (min-width: $desktop-point) {
     position: absolute;
     top: 0;
@@ -35,6 +35,7 @@
 
   @media (min-width: $desktop-point) {
     gap: 14px;
+    align-self: self-start;
   }
 
   &:hover {
